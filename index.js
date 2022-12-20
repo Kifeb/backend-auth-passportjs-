@@ -28,4 +28,8 @@ app.use(
 
 app.use("/auth", authRoutes);
 
+app.get("/", (req, res) => {
+    res.status(200).json({msg: "API Connected"})
+})
+
 app.listen(5000, () => console.log("Server Start"));
